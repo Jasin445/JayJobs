@@ -1,4 +1,4 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import SideBar from "./SideBar";
 import Images from "./Images";
@@ -12,9 +12,17 @@ import { emailAction } from "./store";
 export default function PageContent() {
     const navigate = useNavigate()
     const dispatch = useDispatch();
+    const location = useLocation()
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        localStorage.removeItem('oobCode')
+    }, [location.pathname]);
+
     useEffect(() => {
         // Listen for authentication state changes
-        const unsubscribe = auth.onAuthStateChanged((user: any) => {
+        const unsubscribe: any = auth?.onAuthStateChanged((user: any) => {
                 dispatch(emailAction.setEmail(user?.email))
             if (!user) {
                 localStorage.removeItem('token');
@@ -24,11 +32,11 @@ export default function PageContent() {
 
         // Function to periodically check if the user is deleted
         const checkUserDeletion = async () => {
-            const user = auth.currentUser;
+            const user = auth?.currentUser;
             if (user) {
                 try {
                     await user.reload();
-                    if (!auth.currentUser) {
+                    if (!auth?.currentUser) {
                         throw new Error("User no longer exists");
                     }
                 } catch (error) {
