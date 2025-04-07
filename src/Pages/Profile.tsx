@@ -1,7 +1,7 @@
 import { useState } from "react";
 
  const ProfilePage = () => {
-    const [profile, setProfile] = useState({
+    const [profile] = useState({
       name: 'John Doe',
       email: 'john.doe@example.com',
       bio: 'Software Engineer',

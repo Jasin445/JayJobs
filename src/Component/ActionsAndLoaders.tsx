@@ -31,7 +31,7 @@ export async function  action({ request }: { request: Request }){
     if(Object.values(newError).length === 0){
         
         if( URLs === 'signup'){
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password) || 'emailexist'
+            const userCredential = await createUserWithEmailAndPassword(auth!, email, password) || 'emailexist'
             const user = userCredential.user;
             if(user){
                 const exp = getExpTime()
@@ -43,7 +43,7 @@ export async function  action({ request }: { request: Request }){
         }
 
         if(URLs === 'login'){
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const userCredential = await signInWithEmailAndPassword(auth!, email, password);
             const user = userCredential.user;
             const token = await user.getIdToken();
             localStorage.setItem('token', token)
