@@ -31,7 +31,6 @@ export async function  action({ request }: { request: Request }){
     if(Object.values(newError).length === 0){
         
         if( URLs === 'signup'){
-            try{
             const userCredential = await createUserWithEmailAndPassword(auth!, email, password) || 'emailexist'
             const user = userCredential.user;
             if(user){
@@ -41,13 +40,9 @@ export async function  action({ request }: { request: Request }){
                 sessionStorage.setItem('phoneNumber', phoneNumber as string)
                return redirect(`/authentication/emailverify?email=${email}`)
             }
-        }catch(error){
-            return {error: error}
-        }
         }
 
         if(URLs === 'login'){
-            try{
             const userCredential = await signInWithEmailAndPassword(auth!, email, password);
             const user = userCredential.user;
             const token = await user.getIdToken();
@@ -64,10 +59,6 @@ export async function  action({ request }: { request: Request }){
             if(user && user.emailVerified){
                 return redirect('/jayjobs')
             }
-
-        }catch(error){
-            return {error: error}
-        }
         }
 
         if(URLs === 'passwordverify'){
