@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/authentication',
+    path: '/authentication?mode=signup',
     element: <Authentication />,
     action: signupAction,
     errorElement: <ErrorComponent />  },
