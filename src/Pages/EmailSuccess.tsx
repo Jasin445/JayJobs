@@ -2,7 +2,7 @@ import EmailContent from "../Component/EmailContent";
 import SignupLayout from "../Component/hooks/SignupLayout";
 import { LandingButton } from "../Component/utils";
 import tick from '../assets/tick.png'
-import pics from '../assets/signUpImage.jpeg'
+import pics from '../assets/plouzane-1758197_1280.jpg'
 export default function EmailSuccess() {
     return <>
         <SignupLayout signupPics={pics}>

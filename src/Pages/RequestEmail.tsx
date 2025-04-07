@@ -5,7 +5,7 @@ import { Input } from "../Component/utils"
 import { useDispatch, useSelector } from "react-redux"
 import { errorAction } from "../Component/store"
 import SignupLayout from "../Component/hooks/SignupLayout"
-import pics from '../assets/ai-job-search-tools-1024x683.webp'
+import pics from '../assets/plouzane-1758197_1280.jpg'
 
 
 export default function RequestEmail() {
