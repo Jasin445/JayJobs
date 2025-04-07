@@ -161,8 +161,11 @@ export function getExpTime(){
     return exp
 }
 
+const endpoint = import.meta.env.VITE_APP_DOMAIN
+
+
 export const requestOTP = async (email: any, action: any) => {
-    const response = await fetch('http://localhost:3000/api/send-otp', {
+    const response = await fetch(`${endpoint}/api/send-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, action }), // 'verify' or 'reset'
@@ -178,7 +181,8 @@ export const requestOTP = async (email: any, action: any) => {
   };
 
 export const verifyOTP = async (email: any, otp: any, newPassword = null) => {
-    const response = await fetch('http://localhost:3000/api/verify-otp', {
+  console.log(endpoint)
+    const response = await fetch(`${endpoint}/api/verify-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, otp, newPassword }),

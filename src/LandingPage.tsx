@@ -6,6 +6,7 @@ import customExp from './assets/customExp.png'
 import FAQSection from './Component/FAQSection'
 import { LinkButton } from './Component/utils'
 
+
 export default function LandingPage() {
     return <>
         <div className="pt-[90px] w-[88%] m-auto">
