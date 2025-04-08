@@ -57,7 +57,7 @@ export function InputOtp({ value, index, otp, setOtp }: OtpProps) {
     function handleOnChange(index: number, val: any) {
         if (/^\d+$/.test(val) && val.length <= 1) {
             const newOtp = [...otp]
-            newOtp[index] = val
+            otp[index] = val
             setOtp(newOtp)
             if (index < otp.length - 1) {
                 inputRef.current.nextElementSibling.focus()
@@ -72,10 +72,10 @@ export function InputOtp({ value, index, otp, setOtp }: OtpProps) {
 
     function onHandlePaste(e: ClipboardEvent<HTMLInputElement>) {
         e.preventDefault();
-        const pastedData = e.clipboardData.getData('text');
-
+        const pastedData = (e.clipboardData.getData('text'));
         if (/^\d+$/.test(pastedData) && pastedData.length === otp.length) {
             setOtp(pastedData.split(''));
+            return;
         }
 
         const syntaxError = { error: 'Invalid paste data. Must be 4 digits' }
