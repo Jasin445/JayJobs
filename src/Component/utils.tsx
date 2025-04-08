@@ -91,7 +91,7 @@ export function validate(email:string, password:any, phoneNumber: any, test: any
 
     if(!test2){
         if(!passwordValid){
-            newError.password = "Enter a Valid Password!"
+            newError.password = "Password must be six characters or more, contains atleast one uppercase and one digit!"
         }
 
     }

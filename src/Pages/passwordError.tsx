@@ -9,7 +9,7 @@ export default function PasswordFailure(){
     const navigate = useNavigate();
 
     function backToLogin(){
-        navigate('/authentication?mode=verify')
+        navigate('/authentication?mode=login')
     }
 
     return  <>
