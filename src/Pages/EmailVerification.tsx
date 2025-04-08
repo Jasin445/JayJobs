@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom"
 import { VerifyPage } from "../Component/EmailContent"
-import SignupLayout from "../Component/hooks/SignupLayout";
+import SignupLayout from "../Component/SignupLayout";
 import pics from '../assets/plouzane-1758197_1280.jpg'
 
 export default function EmailVerification() {

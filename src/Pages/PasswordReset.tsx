@@ -4,7 +4,7 @@ import { Input } from "../Component/utils";
 import { useActionData, useNavigation } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { errorAction } from "../Component/store";
-import SignupLayout from "../Component/hooks/SignupLayout";
+import SignupLayout from "../Component/SignupLayout";
 import pics from '../assets/plouzane-1758197_1280.jpg'
 
 

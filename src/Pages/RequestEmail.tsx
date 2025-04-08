@@ -4,7 +4,7 @@ import FormContent from "../Component/FormContent"
 import { Input } from "../Component/utils"
 import { useDispatch, useSelector } from "react-redux"
 import { errorAction } from "../Component/store"
-import SignupLayout from "../Component/hooks/SignupLayout"
+import SignupLayout from "../Component/SignupLayout"
 import pics from '../assets/plouzane-1758197_1280.jpg'
 
 

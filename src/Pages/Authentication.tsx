@@ -2,7 +2,7 @@ import { Link, useActionData, useLocation, useNavigation, useSearchParams } from
 import Form from '../Component/Form'
 import signupPics from '../assets/plouzane-1758197_1280.jpg'
 import { useEffect } from 'react'
-import SignupLayout from '../Component/hooks/SignupLayout'
+import SignupLayout from '../Component/SignupLayout'
 
 export default function Authentication() {
     const [searchParams] = useSearchParams()

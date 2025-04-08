@@ -181,7 +181,6 @@ export const requestOTP = async (email: any, action: any) => {
   };
 
 export const verifyOTP = async (email: any, otp: any, newPassword = null) => {
-  console.log(endpoint)
     const response = await fetch(`${endpoint}/api/verify-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

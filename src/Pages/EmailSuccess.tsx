@@ -1,5 +1,5 @@
 import EmailContent from "../Component/EmailContent";
-import SignupLayout from "../Component/hooks/SignupLayout";
+import SignupLayout from "../Component/SignupLayout";
 import { LandingButton } from "../Component/utils";
 import tick from '../assets/tick.png'
 import pics from '../assets/plouzane-1758197_1280.jpg'
