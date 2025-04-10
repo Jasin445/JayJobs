@@ -57,7 +57,7 @@ export function InputOtp({ value, index, otp, setOtp }: OtpProps) {
     function handleOnChange(index: number, val: any) {
         if (/^\d+$/.test(val) && val.length <= 1) {
             const newOtp = [...otp]
-            otp[index] = val
+            newOtp[index] = val
             setOtp(newOtp)
             if (index < otp.length - 1) {
                 inputRef.current.nextElementSibling.focus()
