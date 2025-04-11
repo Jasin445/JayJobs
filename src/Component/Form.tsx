@@ -48,11 +48,10 @@ export default function Forms({ mode, error, isSubmitting, message }: any) {
             link={""}
             content={""}
             onSubmit={undefined}>
-            {mode ? <img src={signupImg}
-                alt="" /> :
-                <h1 className="text-center text-5xl text-stone-500 pt-4 pb-16">Login Your Account</h1>}
+            {mode ?  <h1 className="text-center text-4xl text-stone-500 pt-4 pb-5 max-sm:text-[23px] smallest:py-0 smallest:pb-2">Sign up</h1>
+                 :
+                <h1 className="text-center text-4xl text-stone-500 pt-4 pb-6 max-sm:text-[23px]">Login Your Account</h1>}
 
-            {/* {(error) && <p className={`text-center ${url ? 'text-green-800 ': 'text-red-800'}`}>{error.code}</p>} */}
             {((errors && !errors?.newError) &&
                 <p className="text-center lowercase text-red-800"
                 >{errors?.code || errors}</p>)}
@@ -72,7 +71,7 @@ export default function Forms({ mode, error, isSubmitting, message }: any) {
                 onChange={handleOnChange}
                 error2={""} />
             <button
-                className={`text-[15px] text-black bg-gray-200 px-2 py-2 self-end rounded cursor-pointer`}
+                className={`text-[15px] text-black bg-gray-200 px-2 max-sm:mt-4 py-2 self-end rounded cursor-pointer`}
                 type="submit">{mode ? isSubmitting ? "signing up..." : "Sign Up" : isSubmitting ? "logging in..." : "Log in"}
 
             </button>

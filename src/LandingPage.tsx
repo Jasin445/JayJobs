@@ -29,7 +29,7 @@ export default function LandingPage() {
             </div>
 
 
-        <div className="mt-[4%] grid grid-cols-3 l gap-8">
+        <div className="mt-[4%] grid grid-cols-3 l gap-[2%] mb-[90px]">
             <Card img={createProfile} 
             text={'lorekjhvbnjhvgcf vbnmbhjvgbv bnjbhvg bnmbjhvg bnjbhvg bnbhvg bn,hjkgcbv nkjhvn'} 
             header={'Create a new Profile'} 
@@ -51,7 +51,7 @@ export default function LandingPage() {
         <FAQSection></FAQSection>
 
         <div className='mt-11'>
-            <h1 className="text-2xl text-center mb-9">
+            <h1 className="text-2xl text-center mb-9 max-sm:text-[19px]">
                 Still have questions. reach out to our customer care
             </h1>
             <LinkButton 
