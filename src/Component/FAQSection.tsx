@@ -11,7 +11,7 @@ export default function FAQSection() {
     }
 
     return <>
-        <div className='mt-[100px] max-sm:mt-[40px]'>
+        <div className='mt-[100px] max-sm:mt-[80px]'>
             <h1 className="text-center text-4xl mb-6 max-sm:text-[25px]">FAQ Section</h1>
             <h1 className='text-2xl text-center mb-11 max-sm:text-[18px]'>Everything you need to know</h1>
 
