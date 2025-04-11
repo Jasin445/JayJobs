@@ -150,5 +150,13 @@
   .edited{
     font-size: 17px;
   }
+
+  .image {
+    background-image: url('./assets/ai-job-search-tools-1024x683.webp');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; /* Keeps image ratio intact */
+    height: 42vh; /* Or any desired height */
+  }
 }
 
