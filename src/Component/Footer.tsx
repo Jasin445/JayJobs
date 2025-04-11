@@ -8,15 +8,15 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     const date = new Date();
 
-    return <div className="mt-[100px] bg-slate-500 w-full pt-16 px-[9%]">
-        <h1 className="s mb-16 text-4xl">JayJobs</h1>
+    return <div className="mt-[10%] bg-slate-500 w-full pt-16 px-[9%]">
+        <h1 className="s mb-[8%] text-4xl max-sm:text-3xl">JayJobs</h1>
         <div className="grid gridNow mb-14">
             <div>
 
-                <p className="mr-16 text-[19px]">Get Jobs according to your line of work, and your level of expertise.</p>
+                <p className="mr-16 text-[19px] max-sm:mr-0">Get Jobs according to your line of work, and your level of expertise.</p>
             </div>
             <div>
-                <p className="mb-4 mr-12 text-[19px]">Get messages about available Jobs associated with your Niche </p>
+                <p className="mb-4 mr-12 text-[19px] max-sm:mr-0">Get messages about available Jobs associated with your Niche </p>
                 <div className="flex items-center m gap-3">
                     <input
                         className="px-2 h-10"

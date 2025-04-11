@@ -30,7 +30,7 @@ export default function FormContent(
     return <>
         <div className={`${prop}`}>
 
-            <Form className={` border-double border-[10px] pb-12 pt-4 px-11 w-[540px] h-[auto] flex flex-col rounded-[20px] width mx-auto relative`}
+            <Form className={` border-double border-[10px] pb-12 pt-4 px-11 w-[540px] h-[auto] flex flex-col rounded-[20px] width mx-auto relative smallest:`}
                 onSubmit={onSubmit}
                 method={method}>
 

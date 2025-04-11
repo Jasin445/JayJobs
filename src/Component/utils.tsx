@@ -41,7 +41,7 @@ export const accordionDetails = [
 ]
 
 export function LinkButton({text, link}: any){
-    return  <Link className="flex justify-center bg-slate-300 w-[170px] m-auto text-center py-3 text-[18px] rounded-[400px] mb-9" to={link}>{text}</Link>
+    return  <Link className="flex justify-center bg-slate-300 w-[170px] m-auto md text-center py-3 text-[18px] rounded-[400px] mb-9 max-sm:py-2" to={link}>{text}</Link>
 }
 
 
@@ -54,10 +54,10 @@ interface InputProps{
 }
 
 export function Input({text, name, error, error2, onChange = null} : InputProps){
-    return  <div className="mb-7">
+    return  <div className="mb-7 max-sm:mb-2">
     <p className="text-red-700 text-2xl mb-3">{error2}</p>
     <label className="block mb-2" htmlFor={name}>{text}</label>
-    <input className="border-[2px] w-full rounded-[10px] py-3 mm px-2" type="text" name={name} onChange={onChange} placeholder={name}/>
+    <input className="border-[2px] w-full rounded-[10px] py-3 max-sm:py-2 mm px-2" type="text" name={name} onChange={onChange} placeholder={name}/>
     <p className="text-red-800">{error}</p>
     </div>
 }

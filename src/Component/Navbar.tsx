@@ -9,11 +9,11 @@ export default function Navbar({children}: navProps) {
         <nav className="fixed top-0 w-[100%] bg-white h-[90px] border-b-2 border-gray-200">
             <div className="h-[90px] w-[95%] m-auto flex justify-between items-center">
                 <div>
-                <h1 className="text-[27px]">JayJobs</h1>
+                <h1 className="text-[27px] max-sm:text-[25px]">JayJobs</h1>
 
                 </div>
               
-                <div className="flex gap-10 items-center justify-between">
+                <div className="flex gap-10 items-center justify-between max-sm:gap-3">
                    
                     {children}
                     
