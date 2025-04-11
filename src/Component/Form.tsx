@@ -1,5 +1,4 @@
 import { Input } from "./utils";
-import signupImg from '../assets/signupLogo.jpeg'
 import FormContent from "./FormContent";
 import { useEffect, useRef } from "react";
 import { errorAction } from "./store";
