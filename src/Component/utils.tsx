@@ -69,7 +69,7 @@ export function Input({text, name, error, error2, pass, onChange = null} : Input
         <input className="border-[2px] w-full rounded-[10px] py-3 max-sm:py-2 mm px-2" type={"text"} name={name} onChange={onChange} placeholder={name}/>
 
 }    <p className="text-red-800 max-sm:w-[85%]">{error}</p>
-    {pass && <img className={`absolute cursor-pointer  ${!isClicked ? "w-10 top-[59%] right-2 " : "w-10 top-[58%] right-2" }`} onClick={toggle} src={isClicked ? hidePassword : showPassword} alt="" />}
+    {pass && <img className={`absolute cursor-pointer  ${!isClicked ? "w-10 top-[56px] right-2 max-sm:top-[52px] " : "w-10 top-[55px] right-2 max-sm:top-[51px]" }`} onClick={toggle} src={isClicked ? hidePassword : showPassword} alt="" />}
 
     </div>
 }
