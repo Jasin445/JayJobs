@@ -11,7 +11,7 @@
     mix-blend-mode:color-burn;
     width: 100%;
     height: 60vw;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 
 .box{
