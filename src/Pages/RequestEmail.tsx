@@ -54,7 +54,7 @@ export default function RequestEmail() {
         <SignupLayout signupPics={pics}>
             <FormContent method="post" prop="flex flex-col justify-center h-[100vh]" link="/authentication?mode=login" content="Back to Login" onSubmit={undefined}>
                 <div className="mt-6">
-                    <Input text="Enter your email address" onChange={(e: { target: { value: any} } ) => getEmail(e)} name="email" error={ error?.error?.newError?.email || "" } error2={!error?.error?.newError ? error: ''} />
+                    <Input text="Enter your email address" onChange={(e: { target: { value: any} } ) => getEmail(e)} name="email" error={error?.error?.newError?.email || ""} error2={!error?.error?.newError ? error : ''} pass={false} />
                     <button className="text-[15px] text-black bg-gray-200 px-2 py-2 self-end rounded cursor-pointer" type="submit">
                         {isSubmitting ? 'Sending...' : 'Send Email Link'}
                     </button>
