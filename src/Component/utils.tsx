@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { Link, redirect } from "react-router-dom"
+import hidePassword from '../assets/showPass.png'
+import showPassword from '../assets/hidePass.png'
 
 
 export interface navProps{
@@ -50,15 +52,25 @@ interface InputProps{
     name: string,
     error: string,
     onChange: any,
-    error2: string
+    error2: string,
+    pass: boolean
 }
 
-export function Input({text, name, error, error2, onChange = null} : InputProps){
-    return  <div className="mb-7 max-sm:mb-2">
+export function Input({text, name, error, error2, pass, onChange = null} : InputProps){
+  const [isClicked, setIsClicked] = useState<boolean>(false)
+
+  function toggle(){
+    setIsClicked(prev => !prev)
+  }
+    return  <div className="mb-7 max-sm:mb-2 relative">
     <p className="text-red-700 text-2xl mb-3">{error2}</p>
     <label className="block mb-2" htmlFor={name}>{text}</label>
-    <input className="border-[2px] w-full rounded-[10px] py-3 max-sm:py-2 mm px-2" type="text" name={name} onChange={onChange} placeholder={name}/>
-    <p className="text-red-800">{error}</p>
+    { pass ? <input className="border-[2px] w-full rounded-[10px] py-3 max-sm:py-2 mm px-2" type={(isClicked && pass === true) ? "text" : "password" } name={name} onChange={onChange} placeholder={name}/> : 
+        <input className="border-[2px] w-full rounded-[10px] py-3 max-sm:py-2 mm px-2" type={"text"} name={name} onChange={onChange} placeholder={name}/>
+
+}    <p className="text-red-800">{error}</p>
+    {pass && <img className={`absolute cursor-pointer  ${!isClicked ? "w-10 top-[59%] right-2 " : "w-10 top-[58%] right-2" }`} onClick={toggle} src={isClicked ? hidePassword : showPassword} alt="" />}
+
     </div>
 }
 

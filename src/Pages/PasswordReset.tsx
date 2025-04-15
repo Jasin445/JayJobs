@@ -54,13 +54,13 @@ export default function PasswordReset() {
                     <Input
                         text={"New Password"}
                         name={"newPassword"} error={error?.includes('you must') ? error : ''}
-                        onChange={handleOnChange} error2={""}></Input>
+                        onChange={handleOnChange} error2={""} pass={true}></Input>
                     <Input
                         text={"Confirm Password"}
                         name={"confirmPassword"}
                         error={error?.includes('you must') ? error : ''}
                         onChange={handleOnChange}
-                        error2={""}></Input>
+                        error2={""} pass={true}></Input>
                     <button
                         className={`text-[15px] text-black bg-gray-200 px-2 py-2 self-end rounded cursor-pointer`}
                         type="submit">{isSubmitting ? 'Resetting...' : 'Reset'}
