@@ -1,38 +1,17 @@
-import { useState } from "react";
 import { useSelector } from "react-redux"
 
   function Dashboard(){
     const email = useSelector((state: any) => state.error.email);
-    console.log(email)
-
-      const [menuOpen, setMenuOpen] = useState(false);
     
-      const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-      };
     
       return (
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex">
          
     
           {/* Main Content */}
           <main className="flex-1 p-4">
             {/* Mobile Menu Button */}
-            <div className="md:hidden mb-4">
-              <button onClick={toggleMenu} className="text-gray-600">
-                <svg
-                  className="h-6 w-6 fill-current"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M4 6H20V8H4V6ZM4 11H20V13H4V11ZM4 16H20V18H4V16Z"
-                  />
-                </svg>
-              </button>
-            </div>
+           
     
             <h1 className="text-2xl font-semibold mb-4">Hi {email}, Welcome to your Dashboard</h1>
     

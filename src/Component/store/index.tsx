@@ -15,11 +15,26 @@ const errorSlice = createSlice({
     }
 })
 
+const toggleMenuSlice = createSlice({
+    name: 'toggleMenu',
+    initialState: {isToggled: false},
+    reducers: {
+        toggle(state){
+            state.isToggled = !state.isToggled
+        },
+
+        toggleFalse(state){
+            state.isToggled = false
+        }
+    }
+})
+
 const store = configureStore({
-    reducer: { error: errorSlice.reducer }
+    reducer: { error: errorSlice.reducer, toggle: toggleMenuSlice.reducer }
 })
 
 export const errorAction = errorSlice.actions;
 export const emailAction = errorSlice.actions;
+export const toggleAction = toggleMenuSlice.actions
 
 export default store

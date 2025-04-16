@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        'max-mm': { 'max': '940px' }, // max-width breakpoint
         'max-sm': { 'max': '640px' }, // max-width breakpoint
         'smallest': {'max': '340px'}
       },
